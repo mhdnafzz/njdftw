@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Crosshair, Zap, Flame, Target, Swords } from "lucide-react";
+import { Flame, Zap } from "lucide-react";
 
 const stagger = {
   hidden: { opacity: 0 },
@@ -13,18 +13,7 @@ const fadeUp = {
 };
 
 export default function AboutMe() {
-  const games = [
-    { name: "Valorant", role: "Duelist / IGL", rank: "Immortal 3" },
-    { name: "Apex Legends", role: "Main Wraith", rank: "Master" },
-    { name: "League of Legends", role: "Mid / Jungle", rank: "Diamond II" },
-  ];
 
-  const traits = [
-    { icon: <Flame className="w-5 h-5" />, label: "Aggressive" },
-    { icon: <Target className="w-5 h-5" />, label: "Aim-centric" },
-    { icon: <Swords className="w-5 h-5" />, label: "Shotcaller" },
-    { icon: <Zap className="w-5 h-5" />, label: "Clutch Player" },
-  ];
 
   return (
     <section id="about" className="py-28 px-6">
@@ -53,55 +42,51 @@ export default function AboutMe() {
               <div className="w-10 h-10 rounded-xl bg-neon-cyan/10 flex items-center justify-center">
                 <Zap className="w-5 h-5 text-neon-cyan" />
               </div>
-              <h3 className="text-xl font-bold text-white">The Story So Far</h3>
+              <h3 className="text-xl font-bold text-white">About Me</h3>
             </div>
-            <p className="text-slate-400 leading-relaxed mb-6">
-              Competitive FPS & MOBA player who lives for high-stakes ranked matches and deep
-              theory-crafting. I push mechanical skill to the limit, analyse every VOD, and call
-              the shots for my squad. When I'm not grinding the ladder, I'm streaming casual
-              play-throughs or breaking down pro strats.
+            <p className="text-slate-400 leading-relaxed">
+              My name is Muhammed najad. I am from Kerala, India. My dream is to achieve
+              something with this game like &apos;Raistar&apos; and other big content creators.
+              Hope you all support — all I need is your love and support. Watch my gameplay
+              and rate it!
             </p>
 
-            {/* Trait pills */}
-            <div className="flex flex-wrap gap-2">
-              {traits.map((t, i) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-white/[0.04] border border-white/[0.06] text-slate-300 hover:border-neon-cyan/30 hover:text-neon-cyan transition-colors"
-                >
-                  {t.icon}
-                  {t.label}
-                </span>
-              ))}
-            </div>
           </motion.div>
 
           {/* Game rotation — narrow card */}
           <motion.div variants={fadeUp} className="lg:col-span-2 glass-card p-8">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 rounded-xl bg-neon-purple/10 flex items-center justify-center">
-                <Crosshair className="w-5 h-5 text-neon-purple" />
+                <Flame className="w-5 h-5 text-neon-purple" />
               </div>
               <h3 className="text-xl font-bold text-white">Main Rotation</h3>
             </div>
 
             <div className="space-y-4">
-              {games.map((g, i) => (
-                <div
-                  key={i}
-                  className="group flex items-center justify-between p-3 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-transparent hover:border-white/[0.06] transition-all"
-                >
-                  <div>
-                    <p className="text-white font-semibold text-sm group-hover:text-neon-cyan transition-colors">
-                      {g.name}
-                    </p>
-                    <p className="text-slate-500 text-xs">{g.role}</p>
-                  </div>
-                  <span className="text-[11px] font-bold text-neon-purple bg-neon-purple/10 px-2.5 py-1 rounded-full">
-                    {g.rank}
-                  </span>
+              <div className="group flex items-center justify-between p-3 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] border border-transparent hover:border-white/[0.06] transition-all">
+                <div>
+                  <p className="text-white font-semibold text-sm group-hover:text-neon-cyan transition-colors">
+                    Free Fire Battleground
+                  </p>
+                  <p className="text-slate-500 text-xs">1v4 Specialist</p>
                 </div>
-              ))}
+                <span className="text-[11px] font-bold text-neon-purple bg-neon-purple/10 px-2.5 py-1 rounded-full">
+                  Grandmaster
+                </span>
+              </div>
+              <p className="text-slate-500 text-xs leading-relaxed mt-2">
+                Developed by 111dots Studio and published by Garena, Free Fire is a high-octane
+                mobile battle royale that has become a global phenomenon since its 2017 release.
+                Unlike other games in the genre, it focuses on fast-paced, 10-minute matches
+                where 50 players drop onto an island to scavenge for loot and fight to be the
+                last one standing. It features a unique character system where each hero has
+                special active or passive abilities—like increased sprinting speed or
+                healing—that can be mixed and matched using presets. Key gameplay mechanics
+                include the use of Gloo Walls for instant cover and a ranking system that ranges
+                from Bronze to Grandmaster. With the release of Free Fire MAX, players can also
+                experience enhanced graphics and smoother performance while staying connected to
+                the original community through FireLink technology.
+              </p>
             </div>
           </motion.div>
         </div>

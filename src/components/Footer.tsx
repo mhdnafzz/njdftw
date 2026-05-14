@@ -1,38 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  IconBrandDiscord,
-  IconBrandX,
-  IconBrandTwitch,
-  IconBrandYoutube,
-} from "@tabler/icons-react";
+import { IconBrandInstagram } from "@tabler/icons-react";
 
 export default function Footer() {
   const socials = [
     {
-      icon: <IconBrandDiscord className="w-5 h-5" />,
-      href: "#",
-      label: "Discord",
-      hoverColor: "#5865F2",
+      icon: <IconBrandInstagram className="w-5 h-5" />,
+      href: "#", // ← paste first Instagram URL here
+      label: "Instagram",
+      hoverColor: "#E1306C",
     },
     {
-      icon: <IconBrandX className="w-5 h-5" />,
-      href: "#",
-      label: "X / Twitter",
-      hoverColor: "#fff",
-    },
-    {
-      icon: <IconBrandTwitch className="w-5 h-5" />,
-      href: "#",
-      label: "Twitch",
-      hoverColor: "#9146FF",
-    },
-    {
-      icon: <IconBrandYoutube className="w-5 h-5" />,
-      href: "#",
-      label: "YouTube",
-      hoverColor: "#FF0000",
+      icon: <IconBrandInstagram className="w-5 h-5" />,
+      href: "#", // ← paste second Instagram URL here
+      label: "Instagram 2",
+      hoverColor: "#E1306C",
     },
   ];
 

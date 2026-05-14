@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Gamepad2 } from "lucide-react";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,15 +31,43 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 h-[4.5rem] flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-neon-cyan to-neon-purple flex items-center justify-center">
-            <Gamepad2 className="w-4 h-4 text-white" />
+        <a href="#" className="flex flex-col gap-0.5 group">
+          {/* Top row: image + name */}
+          <div className="flex items-center gap-2.5">
+            <img
+              src="/brand_logo.png"
+              alt="njdftw brand logo"
+              className="w-8 h-8 rounded-lg object-cover"
+            />
+            <span className="text-lg font-extrabold tracking-tight text-white group-hover:text-neon-cyan transition-colors">
+              njdftw
+            </span>
           </div>
-          <span className="text-lg font-extrabold tracking-tight text-white group-hover:text-neon-cyan transition-colors">
-            njdftw
-          </span>
+          {/* UID badge */}
+          <div className="flex items-center pl-[2.625rem]">
+            <span
+              className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-mono font-semibold tracking-widest text-slate-400 border"
+              style={{
+                borderColor: "rgba(34,211,238,0.25)",
+                boxShadow: "0 0 6px rgba(34,211,238,0.12)",
+                letterSpacing: "0.08em",
+              }}
+            >
+              {/* Tiny flame icon */}
+              <svg
+                width="8"
+                height="8"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="text-neon-cyan opacity-80 shrink-0"
+              >
+                <path d="M12 2C8.5 7 6 9.5 6 13a6 6 0 0012 0c0-3.5-2.5-6-6-11z" />
+              </svg>
+              UID: 288673346
+            </span>
+          </div>
         </a>
 
         {/* Desktop Nav */}
