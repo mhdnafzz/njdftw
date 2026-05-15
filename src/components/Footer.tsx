@@ -13,7 +13,7 @@ export default function Footer() {
     },
     {
       icon: <IconBrandInstagram className="w-5 h-5" />,
-      href: "#", // ← paste second Instagram URL here
+      href: "https://www.instagram.com/njdftw/", // ← paste second Instagram URL here
       label: "Instagram 2",
       hoverColor: "#E1306C",
     },
