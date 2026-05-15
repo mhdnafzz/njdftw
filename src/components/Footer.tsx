@@ -7,7 +7,7 @@ export default function Footer() {
   const socials = [
     {
       icon: <IconBrandInstagram className="w-5 h-5" />,
-      href: "#", // ← paste first Instagram URL here
+      href: "https://www.instagram.com/mh_najad/", // ← paste first Instagram URL here
       label: "Instagram",
       hoverColor: "#E1306C",
     },
